@@ -1,24 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,600;1,200;1,600&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
-html{
-  font-size: 62.5;
+
+html {
+  font-size: 62.5%;
   box-sizing: border-box;
 }
-body{
+
+body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
-  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%); 
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main{
+
+/* LAYOUT */
+main {
   position: relative;
   width: 100rem;
   height: 60rem;
@@ -30,7 +35,8 @@ main{
   overflow: hidden;
   display: flex;
 }
-.player{
+
+.player {
   flex: 50%;
   padding: 9rem;
   display: flex;
@@ -38,7 +44,9 @@ main{
   align-items: center;
   transition: all 0.75s;
 }
-.name{
+
+/* ELEMENTS */
+.name {
   position: relative;
   font-size: 4rem;
   text-transform: uppercase;
@@ -47,40 +55,52 @@ main{
   font-weight: 300;
   margin-bottom: 1rem;
 }
-.score{
-  color: #c7365f;
-  margin-bottom: auto;
+
+.score {
   font-size: 8rem;
   font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
 }
-.player--active{
+
+.player--active {
   background-color: rgba(255, 255, 255, 0.4);
 }
-.player--active .name{
+.player--active .name {
   font-weight: 700;
 }
-.player--active .score{
+.player--active .score {
   font-weight: 400;
 }
-.current{
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
   background-color: #c7365f;
   opacity: 0.8;
   border-radius: 9px;
   color: #fff;
   width: 65%;
   padding: 2rem;
-  transition: all 075s;
+  text-align: center;
+  transition: all 0.75s;
 }
-.current-label{
+
+.current-label {
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-size: 1.7rem;
   color: #ddd;
 }
-.current-score{
+
+.current-score {
   font-size: 3.5rem;
 }
-.btn{
+
+/* ABSOLUTE POSITIONED ELEMENTS */
+.btn {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -88,23 +108,27 @@ main{
   background: none;
   border: none;
   font-family: inherit;
-  font-size: 1.8;
+  font-size: 1.8rem;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
   transition: all 0.2s;
+
   background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-  padding: 0.7rem 2.5rem; 
+
+  padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
-.btn::first-letter{
-  margin-left: 0.7rem;
-  font-size: 2.4rem; 
+
+.btn::first-letter {
+  font-size: 2.4rem;
   display: inline-block;
+  margin-right: 0.7rem;
 }
+
 .btn--new {
   top: 4rem;
 }
