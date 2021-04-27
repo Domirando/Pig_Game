@@ -45,10 +45,10 @@ btnHold.addEventListener('click', function(){
   if (scores[activePLayer]>=20) {
     playing = false;
     diceEl.classList.add('hidden');
-    document.querySelector(`.player--${activePlayer}`)
-        .classList.add('player--winner');
-    document.querySelector(`.player--${activePlayer}`)
-        .classList.remove('player--active');
+    document.querySelector(`.player--${activePLayer}`)
+    .classList.add('player--winner');
+    document.querySelector(`.player--${activePLayer}`)
+    .classList.remove('player--active');
   } else {
     switchPlayer();
   }
