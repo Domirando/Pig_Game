@@ -46,7 +46,7 @@ btnHold.addEventListener('click', function(){
     playing = false;
     diceEl.classList.add('hidden');
     document.querySelector(`.player--${activePlayer}`)
-        .classList.add('player--winner');
+        .classList.add('player--winner');//isn`t working
     document.querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
   } else {
