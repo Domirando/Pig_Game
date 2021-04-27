@@ -2,7 +2,7 @@
 
 const player0EL = document.querySelector('.player--0');
 const player1EL = document.querySelector('.player--1');
-const score0EL = document.querySelector('#score--0');
+const score0EL = document.getElementById('score--0');
 const score1EL = document.getElementById('score--1');
 const diceEl = document.querySelector('.dice');
 const btnRoll = document.querySelector('.btn--roll');
@@ -18,7 +18,7 @@ let activePLayer = 0;
 let currentScore = 0;
 
 const switchPlayer = function(){
-document.getElementById(`current--${activePLayer}`).textContent = 0;
+  document.getElementById(`current--${activePLayer}`).textContent = 0;
   currentScore=0;
   activePLayer = activePLayer === 0 ? 1 : 0;
   player0EL.classList.toggle('player--active');
@@ -31,11 +31,13 @@ btnRoll.addEventListener('click', function(){
 
 if (dice !== 1) {
   currentScore+=dice;
-  document.getElementById(`score--${activePLayer}`).textContent = currentScore;
+  document.getElementById(`current--${activePLayer}`).textContent = currentScore;
 } else {
   switchPlayer();
 }})
+
 btnHold.addEventListener('click', function(){
   scores[activePLayer] += currentScore;
-  document.getElementById(`current--${activePlayer}`).textContent = scores[activePlayer];
+  document.getElementById(`score--${activePLayer}`).textContent = scores[activePLayer];
+  switchPlayer();
 })
