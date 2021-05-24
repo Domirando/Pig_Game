@@ -1,2 +1,2 @@
 # Pig_Game
-Third project from JavaScript Course
+The third project from JavaScript Course. Game using HTML, CSS, JavaScript.e
